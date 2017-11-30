@@ -1,13 +1,223 @@
+<!DOCTYPE html>
 <html>
+<title>Smart House</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Lato", sans-serif
+    }
 
-<head>
-    <title>Controle</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-</head>
+    .w3-bar,
+    h1,
+    button {
+        font-family: "Montserrat", sans-serif
+    }
+
+    .fa-anchor,
+    .fa-coffee {
+        font-size: 200px
+    }
+</style>
 
 <body>
-    <h1>Teste sem hello word</h1>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-left-align w3-large" style="background-color:#169195">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large" style="background-color:#169195"
+                href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+            <a href="#projeto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projeto</a>
+            <a href="#hardware" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Hardware</a>
+            <a href="#montagem" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Montagem</a>
+            <a href="#howto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">How to use</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#projeto" class="w3-bar-item w3-button w3-padding-large">Projeto</a>
+            <a href="#hardware" class="w3-bar-item w3-button w3-padding-large">Hardware</a>
+            <a href="#montagem" class="w3-bar-item w3-button w3-padding-large">Montagem</a>
+            <a href="#howto" class="w3-bar-item w3-button w3-padding-large">How to use</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-center" style="padding:64px 16px; background-color:#169195">
+        <h1 class="w3-margin w3-jumbo">SMART HOUSE</h1>
+        <p class="w3-xlarge"> <a href="https://www.arduino.cc/">arduino</a> - <a href="https://www.javascript.com/">js</a> - <a href="http://johnny-five.io/">johnny-five</a> </p>
+        <p class="">by
+            <a href="http://lpbaiser.github.io" target="_blank">lpbaiser</a> &
+            <a href="http://rmeloca.github.io" target="_blank">rmoloca</a>
+        </p>
+        <a href='#hardware' class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</a>
+    </header>
+
+    <!-- First Grid -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-twothird">
+                <h1 id='projeto'>Projeto</h1>
+                    <h5 class="w3-padding-32">Este trabalho tem por finalidade a construção de um sistema de automação residencial, neste projeto fizemos
+                        a implementação de uma porta, portão e alarme acionados por comandos. Um ventilador acionado acionado
+                        automáticamente e manualmente por um sensor de temperatura. Os comandos e sinais partem de um servidor
+                        que transfere por meio de bibliotecas os comandos, acionando os atuadores acoplados ao arduino.</h5>
+                <!-- ambos controlados por motores que atuam para abertura e fechamento, com a utilização de sensores, atuadores e um controlador arduino foi possível manusear a porta e portão.  -->
+
+                <!-- <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+            </div>
+
+            <div class="w3-third w3-center">
+                <!-- <i class="fa fa-anchor w3-padding-64 w3-text-red"></i> -->
+                <img class=" w3-padding-64" style="width:60%" src='https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/1280px-Arduino_Logo.svg.png'
+                />
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!-- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i> -->
+                <img class=" w3-padding-64" style="width:60%" src='images/microchip.png' />
+
+            </div>
+
+            <div class="w3-twothird">
+                <h1 id="hardware">Hardware</h1>
+                <h5 class="w3-padding-32">Nesta seção veremos os componentes utilizados para construção do hardware. Veja a lista dos materiais necessários:</h5>
+
+                <ul>
+                    <li>1 Arduino UNO</li>
+                    <li>1 Protoboard</li>
+                    <li>1 Cabo USB</li>
+                    <li>2 Servo Motores</li>
+                    <li>1 Sensor PIR de presença</li>
+                    <li>1 Buzzer</li>
+                    <li>1 Fan</li>
+                    <li>1 Sensor de temperatura LM35</li>
+                    <li>Jumpers</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Third Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <!-- <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i> -->
+                <img class=" w3-padding-64" style="width:60%" src='images/gears.png' />
+
+            </div>
+
+            <div class="w3-twothird">
+                <h1 id="montagem">Montagem do hardware</h1>
+                <h5 class="w3-padding-32">
+                    O processo de montagem do hardware é bem fácil, tendo em mãos os componentes necessários, basta seguir a imagem abaixo e
+                    utilizando jumpers fazer as conexões dos componentes na protoboard e no arduino.
+                </h5>
+            </div>
+        </div>
+
+        <h3 style="margin-left:10%; width:80%">Sketch do projeto</h3>
+        <img src='images/sketch.png' style="margin-left:10%; width:80%" />
+
+        <h3 style="margin-left:10%; width:80%">Projeto montado</h3>
+        <img src='images/projeto.jpg' style="margin-left:10%; width:80%" />
+        
+    </div>
+
+    <!-- Fourth Grid -->
+    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+            <div class="w3-third w3-center">
+                <img class=" w3-padding-64" style="width:60%" src='images/microchip.png' />
+            </div>
+
+            <div class="w3-twothird">
+                <h1 id="howto">How to use</h1>
+                <h3 class="w3-padding-20">
+                    - Dependências
+                </h3>
+                <p>Nós utilizamos na codificação do projeto a linguagem JavaScript com servidor Http
+                    <a href="https://nodejs.org">Node.js</a> e a biblioteca
+                    <a href="http://johnny-five.io">Johnny-Five</a>. Johnny-Five é uma biblioteca para desenvolvimento robótico e IOT, ela integra javascript com inúmeras plataformas de baseadas no Arduino e não arduino.</p>
+
+                <h3 class="w3-padding-20">
+                    - Let's go
+                </h3>
+
+                <ul>
+                    <li>Clone o
+                        <a href="https://github.com/lpbaiser/smarthouse">projeto</a> disponível no Github</li>
+                    <li>Navegue até a pasta do projeto clonado</li>
+                    <li>Compile o arquivo
+                        <a href="https://raw.githubusercontent.com/lpbaiser/smarthouse/master/StandardFirmata.ino?token=ANmF6wZzmfoXrkLtVuO0fjFnAW994JoGks5aKI5YwA%3D%3D"
+                            target="_blank">Standard Firmata</a> na IDE do arduino e exporte para a placa</li>
+                    <li>Instale o
+                        <a href="https://www.npmjs.com/get-npm">NPM</a>
+                    </li>
+                    <li>Instale o
+                        <a href="https://nodejs.org/en/download/package-manager">NODE</a>
+                    </li>
+                    <li>Crie uma base de dados Mysql local com o nome: bdarduino </li>
+                    <li>Instale as dependências do projeto executando: npm install</li>
+                    <li>Rode o arquivo
+                        <a href="https://raw.githubusercontent.com/lpbaiser/smarthouse/master/create_tables.js?token=ANmF68kvdlQbBs7pWylbcDOhdRHt5Jkzks5aKWp6wA%3D%3D">create_tables.js</a>, no terminal com o comando: npm create_tables.js para criar as tabelas na base
+                        de dados</li>
+                    <li>Rode o servidor com o comando: npm run dev</li>
+                    <li>Abra o seu navegar no endereço: http://localhost:3000</li>
+                    <li>Login e senha padrões são: admin</li>
+                    <li>Após o login uma página será exibida com os controles disponíveis para interação com o Hardware</li>
+                </ul>
+                <h3 style="margin-left:10%; width:80%">Painel de controle</h3>
+                <img src='images/controle.png' style="margin-left:10%; width:80%" />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+        <h1 class="w3-margin w3-xlarge">
+
+        </h1>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+
+    </footer>
+
+    <script>
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
 </body>
 
 </html>
